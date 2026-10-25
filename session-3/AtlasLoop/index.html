@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AtlasLoop — Transport intelligent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header"><a class="logo" href="#home"><span><i
+                    class="fa-solid fa-route"></i></span>Atlas<b>Loop</b></a><button id="menuBtn" class="menu-btn"
+            aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        <nav id="nav"><a class="active" href="#home">Accueil</a><a href="#how">Comment ça marche</a><a
+                href="#loads">Annonces</a><a href="#carriers">Transporteurs</a><a href="#tracking">Suivi</a></nav>
+        <div class="head-actions"><button class="btn outline" data-modal="login">Se connecter</button><button
+                class="btn primary" data-modal="register">S'inscrire</button></div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-cover"></div>
+            <div class="hero-copy"><span class="eyebrow"><i class="fa-solid fa-circle-check"></i> La logistique,
+                    autrement</span>
+                <h1>Ne rentrez plus à vide.<br><em>Rentabilisez chaque trajet.</em></h1>
+                <p>AtlasLoop connecte les entreprises qui expédient des marchandises aux transporteurs qui ont de la
+                    capacité disponible. Simple, rapide et transparent.</p>
+                <div class="perks"><span><i class="fa-solid fa-bolt"></i> Mise en relation rapide</span><span><i
+                            class="fa-solid fa-shield-halved"></i> Transporteurs vérifiés</span><span><i
+                            class="fa-solid fa-chart-line"></i> Coûts optimisés</span></div>
+                <div class="actions"><a class="btn primary big" href="#loads">Trouver un transport <i
+                            class="fa-solid fa-arrow-right"></i></a><button class="btn white big"
+                        data-modal="request">Publier une demande</button></div>
+            </div>
+            <div class="stats">
+                <div><b>1 250+</b><small>Transporteurs</small></div>
+                <div><b>8 400+</b><small>Trajets réalisés</small></div>
+                <div><b>4,8/5</b><small>Note moyenne</small></div>
+            </div>
+        </section>
+        <section class="search panel">
+            <div class="section-head">
+                <div><span class="eyebrow">Commencez ici</span>
+                    <h2>Trouvez le bon transport</h2>
+                </div>
+                <p>Quelques informations suffisent pour commencer.</p>
+            </div>
+            <form id="searchForm" class="search-grid"><label>Lieu de départ<div class="field"><i
+                            class="fa-solid fa-location-dot"></i><input id="from" placeholder="Ex. Casablanca" required>
+                    </div></label><label>Destination<div class="field"><i
+                            class="fa-solid fa-location-crosshairs"></i><input id="to" placeholder="Ex. Marrakech"
+                            required></div></label><label>Date souhaitée<div class="field"><i
+                            class="fa-regular fa-calendar"></i><input id="date" type="date"></div></label><button
+                    class="btn primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
+            </form>
+            <p id="searchMsg" class="message"></p>
+        </section>
+        <section class="section" id="how">
+            <div class="section-head">
+                <div><span class="eyebrow">Simple comme bonjour</span>
+                    <h2>Comment fonctionne AtlasLoop ?</h2>
+                    <p>Une seule plateforme pour organiser vos transports de bout en bout.</p>
+                </div>
+            </div>
+            <div class="steps">
+                <article><span class="num">01</span><i class="fa-solid fa-box icon"></i>
+                    <h3>Publiez votre demande</h3>
+                    <p>Indiquez le trajet, la marchandise, le poids et la date souhaitée.</p>
+                </article>
+                <article><span class="num">02</span><i class="fa-solid fa-magnifying-glass-location icon"></i>
+                    <h3>Recevez des offres</h3>
+                    <p>Les transporteurs compatibles consultent votre annonce et proposent leur tarif.</p>
+                </article>
+                <article><span class="num">03</span><i class="fa-solid fa-handshake icon"></i>
+                    <h3>Choisissez votre partenaire</h3>
+                    <p>Comparez les prix, les profils et les avis avant de confirmer.</p>
+                </article>
+                <article><span class="num">04</span><i class="fa-solid fa-truck-fast icon"></i>
+                    <h3>Suivez la livraison</h3>
+                    <p>Consultez les étapes du transport depuis un espace unique.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="loads">
+            <div class="section-head split">
+                <div><span class="eyebrow">Opportunités de transport</span>
+                    <h2>Demandes récentes</h2>
+                    <p>Exemples de demandes publiées sur la plateforme.</p>
+                </div><button class="btn outline" data-modal="request"><i class="fa-solid fa-plus"></i> Publier une
+                    demande</button>
+            </div>
+            <div class="filters" id="filters"><button class="active" data-filter="all">Toutes</button><button
+                    data-filter="route">Routier</button><button data-filter="express">Express</button><button
+                    data-filter="maritime">Maritime</button><span id="count">4 demandes</span></div>
+            <div class="loads" id="loadsGrid">
+                <article class="load" data-type="route" data-from="Casablanca" data-to="Marrakech">
+                    <div class="load-top"><span class="status">● Ouverte</span><small>ATL-2048</small></div>
+                    <div class="route">
+                        <div><small>DÉPART</small><b>Casablanca</b><em>Maroc</em></div><i
+                            class="fa-solid fa-arrow-right"></i>
+                        <div><small>ARRIVÉE</small><b>Marrakech</b><em>Maroc</em></div>
+                    </div>
+                    <div class="details"><span><i class="fa-solid fa-box"></i> Produits emballés</span><span><i
+                                class="fa-solid fa-weight-hanging"></i> 8 tonnes</span><span><i
+                                class="fa-regular fa-calendar"></i> 22 oct. 2026</span></div>
+                    <div class="load-bottom">
+                        <div><small>Budget indicatif</small><b>À proposer</b></div><button class="btn primary offer"
+                            data-id="ATL-2048">Faire une offre</button>
+                    </div>
+                </article>
+                <article class="load" data-type="express" data-from="Rabat" data-to="Tanger">
+                    <div class="load-top"><span class="status">● Ouverte</span><small>ATL-2047</small></div>
+                    <div class="route">
+                        <div><small>DÉPART</small><b>Rabat</b><em>Maroc</em></div><i
+                            class="fa-solid fa-arrow-right"></i>
+                        <div><small>ARRIVÉE</small><b>Tanger</b><em>Maroc</em></div>
+                    </div>
+                    <div class="details"><span><i class="fa-solid fa-box"></i> Colis prioritaires</span><span><i
+                                class="fa-solid fa-weight-hanging"></i> 1,5 tonne</span><span><i
+                                class="fa-regular fa-calendar"></i> 21 oct. 2026</span></div>
+                    <div class="load-bottom">
+                        <div><small>Budget indicatif</small><b>À proposer</b></div><button class="btn primary offer"
+                            data-id="ATL-2047">Faire une offre</button>
+                    </div>
+                </article>
+                <article class="load" data-type="maritime" data-from="Tanger Med" data-to="Marseille">
+                    <div class="load-top"><span class="status orange">● À confirmer</span><small>ATL-2046</small></div>
+                    <div class="route">
+                        <div><small>DÉPART</small><b>Tanger Med</b><em>Maroc</em></div><i class="fa-solid fa-ship"></i>
+                        <div><small>ARRIVÉE</small><b>Marseille</b><em>France</em></div>
+                    </div>
+                    <div class="details"><span><i class="fa-solid fa-box"></i> Équipements</span><span><i
+                                class="fa-solid fa-weight-hanging"></i> 12 tonnes</span><span><i
+                                class="fa-regular fa-calendar"></i> 25 oct. 2026</span></div>
+                    <div class="load-bottom">
+                        <div><small>Budget indicatif</small><b>À proposer</b></div><button class="btn primary offer"
+                            data-id="ATL-2046">Faire une offre</button>
+                    </div>
+                </article>
+                <article class="load" data-type="route" data-from="Agadir" data-to="Casablanca">
+                    <div class="load-top"><span class="status">● Ouverte</span><small>ATL-2045</small></div>
+                    <div class="route">
+                        <div><small>DÉPART</small><b>Agadir</b><em>Maroc</em></div><i
+                            class="fa-solid fa-arrow-right"></i>
+                        <div><small>ARRIVÉE</small><b>Casablanca</b><em>Maroc</em></div>
+                    </div>
+                    <div class="details"><span><i class="fa-solid fa-box"></i> Produits alimentaires</span><span><i
+                                class="fa-solid fa-weight-hanging"></i> 6 tonnes</span><span><i
+                                class="fa-regular fa-calendar"></i> 23 oct. 2026</span></div>
+                    <div class="load-bottom">
+                        <div><small>Budget indicatif</small><b>À proposer</b></div><button class="btn primary offer"
+                            data-id="ATL-2045">Faire une offre</button>
+                    </div>
+                </article>
+            </div>
+            <p id="empty" class="empty hidden">Aucune demande ne correspond à cette recherche.</p>
+            <p class="note"><i class="fa-solid fa-circle-info"></i> Les demandes affichées sont des exemples de
+                démonstration, pas des offres réelles.</p>
+        </section>
+        <section class="section" id="carriers">
+            <div class="section-head split">
+                <div><span class="eyebrow">Nos partenaires</span>
+                    <h2>Transporteurs recommandés</h2>
+                    <p>Comparez les profils et choisissez le partenaire adapté à votre marchandise.</p>
+                </div><button class="btn outline" data-modal="register">Devenir transporteur <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="carriers">
+                <article class="carrier">
+                    <div class="carrier-art green"><i class="fa-solid fa-truck"></i><span>✓ Vérifié</span></div>
+                    <div class="carrier-body">
+                        <div class="carrier-head">
+                            <div class="avatar">TM</div>
+                            <div>
+                                <h3>TransLog Maroc</h3>
+                                <p><b>★★★★★</b> 4,8 <small>(124 avis)</small></p>
+                            </div>
+                        </div>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Casablanca, Maroc</p>
+                        <div class="chips"><span>Camion remorque</span><span>Semi-remorque</span></div>
+                        <div class="carrier-bottom"><span><i class="fa-solid fa-truck"></i> 8 véhicules</span><button
+                                class="btn outline contact" data-name="TransLog Maroc">Contacter</button></div>
+                    </div>
+                </article>
+                <article class="carrier">
+                    <div class="carrier-art blue"><i class="fa-solid fa-truck-fast"></i><span>✓ Vérifié</span></div>
+                    <div class="carrier-body">
+                        <div class="carrier-head">
+                            <div class="avatar blue-avatar">AT</div>
+                            <div>
+                                <h3>Atlas Transport</h3>
+                                <p><b>★★★★★</b> 4,6 <small>(98 avis)</small></p>
+                            </div>
+                        </div>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Rabat, Maroc</p>
+                        <div class="chips"><span>Transport express</span><span>Fourgon</span></div>
+                        <div class="carrier-bottom"><span><i class="fa-solid fa-truck"></i> 5 véhicules</span><button
+                                class="btn outline contact" data-name="Atlas Transport">Contacter</button></div>
+                    </div>
+                </article>
+                <article class="carrier">
+                    <div class="carrier-art gold"><i class="fa-solid fa-truck-moving"></i><span>✓ Vérifié</span></div>
+                    <div class="carrier-body">
+                        <div class="carrier-head">
+                            <div class="avatar gold-avatar">TL</div>
+                            <div>
+                                <h3>Tafraout Logistic</h3>
+                                <p><b>★★★★★</b> 4,7 <small>(76 avis)</small></p>
+                            </div>
+                        </div>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Tanger, Maroc</p>
+                        <div class="chips"><span>Porteur</span><span>Marchandises diverses</span></div>
+                        <div class="carrier-bottom"><span><i class="fa-solid fa-truck"></i> 12 véhicules</span><button
+                                class="btn outline contact" data-name="Tafraout Logistic">Contacter</button></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tracking" id="tracking">
+            <div class="tracking-copy"><span class="eyebrow">Gardez le contrôle</span>
+                <h2>Chaque livraison,<br><em>en toute transparence.</em></h2>
+                <p>Suivez les étapes de votre expédition et consultez les informations importantes depuis un seul
+                    espace.</p><button class="btn primary" data-modal="track">Voir une démonstration <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="track-card">
+                <div class="track-head">
+                    <div><small>EXPÉDITION</small>
+                        <h3>ATL-2039-TR</h3>
+                    </div><span class="status">En transit</span>
+                </div>
+                <div class="timeline">
+                    <div class="stop done"><i class="fa-solid fa-check"></i>
+                        <div><b>Demande créée</b><small>18 oct. · 08:30</small></div>
+                    </div>
+                    <div class="stop done"><i class="fa-solid fa-check"></i>
+                        <div><b>Transporteur confirmé</b><small>18 oct. · 10:15</small></div>
+                    </div>
+                    <div class="stop current"><i class="fa-solid fa-truck"></i>
+                        <div><b>En cours de transport</b><small>19 oct. · 09:20</small></div>
+                    </div>
+                    <div class="stop"><i class="fa-regular fa-clock"></i>
+                        <div><b>Livraison prévue</b><small>20 oct. · 16:00</small></div>
+                    </div>
+                </div>
+                <div class="track-foot"><span>Casablanca → Marrakech</span><span>8 tonnes</span></div>
+            </div>
+        </section>
+        <section class="cta section">
+            <div><span class="eyebrow">Prêt à commencer ?</span>
+                <h2>Faites avancer votre activité avec AtlasLoop.</h2>
+                <p>Que vous expédiiez des marchandises ou proposiez des services de transport, votre prochaine
+                    opportunité commence ici.</p>
+            </div>
+            <div class="cta-actions"><button class="btn white" data-modal="register">Créer un compte</button><button
+                    class="btn light-outline" data-modal="request">Publier une demande</button></div>
+        </section>
+    </main>
+    <footer><a class="logo" href="#home"><span><i class="fa-solid fa-route"></i></span>Atlas<b>Loop</b></a>
+        <p>Ensemble, faisons avancer vos marchandises.</p>
+        <div><a href="#home">Accueil</a><a href="#how">Comment ça marche</a><a href="#carriers">Transporteurs</a><a
+                href="#contact">Contact</a></div><small>© <span id="year"></span> AtlasLoop — Prototype de
+            démonstration.</small>
+    </footer>
+
+    <div class="backdrop hidden" id="request">
+        <div class="modal"><button class="close" data-close>×</button><span class="eyebrow">Nouvelle expédition</span>
+            <h2>Publier une demande de transport</h2>
+            <p>Décrivez votre besoin pour recevoir des offres adaptées.</p>
+            <form id="requestForm">
+                <div class="two"><label>Lieu de départ *<input name="from" required
+                            placeholder="Casablanca"></label><label>Destination *<input name="to" required
+                            placeholder="Marrakech"></label></div>
+                <div class="two"><label>Type de marchandise *<select name="goods" required>
+                            <option value="">Sélectionner</option>
+                            <option>Produits emballés</option>
+                            <option>Produits alimentaires</option>
+                            <option>Équipements</option>
+                            <option>Colis express</option>
+                            <option>Autre</option>
+                        </select></label><label>Poids en tonnes *<input name="weight" type="number" min=".1" step=".1"
+                            required placeholder="8"></label></div>
+                <div class="two"><label>Date souhaitée *<input name="date" type="date" required></label><label>Type de
+                        transport<select name="type">
+                            <option>Transport routier</option>
+                            <option>Transport express</option>
+                            <option>Transport maritime</option>
+                        </select></label></div><label>Description<textarea name="description" rows="3"
+                        placeholder="Dimensions, contraintes, informations utiles..."></textarea></label><button
+                    class="btn primary full" type="submit">Publier la demande</button>
+                <p class="form-msg" id="requestMsg"></p>
+            </form>
+        </div>
+    </div>
+    <div class="backdrop hidden" id="offer">
+        <div class="modal narrow"><button class="close" data-close>×</button><span class="eyebrow">Espace
+                transporteur</span>
+            <h2>Faire une offre</h2>
+            <p>Demande sélectionnée : <b id="offerRef"></b></p>
+            <form id="offerForm"><input id="offerId" type="hidden"><label>Votre entreprise *<input name="company"
+                        required placeholder="Nom de votre société"></label><label>Prix proposé (MAD) *<input
+                        name="price" type="number" min="1" required placeholder="1800"></label><label>Délai estimé<input
+                        name="delay" placeholder="Ex. 1 jour"></label><label>Message<textarea name="message" rows="3"
+                        placeholder="Présentez votre offre..."></textarea></label><button class="btn primary full"
+                    type="submit">Envoyer l'offre</button>
+                <p class="form-msg" id="offerMsg"></p>
+            </form>
+        </div>
+    </div>
+    <div class="backdrop hidden" id="login">
+        <div class="modal narrow"><button class="close" data-close>×</button><span class="eyebrow">Bon retour</span>
+            <h2>Se connecter</h2>
+            <p>Accédez à votre espace AtlasLoop.</p>
+            <form id="loginForm"><label>E-mail<input type="email" required
+                        placeholder="vous@entreprise.ma"></label><label>Mot de passe<input type="password" required
+                        minlength="6" placeholder="Mot de passe"></label><button class="btn primary full"
+                    type="submit">Se connecter</button>
+                <p class="form-msg" id="loginMsg"></p>
+            </form>
+        </div>
+    </div>
+    <div class="backdrop hidden" id="register">
+        <div class="modal narrow"><button class="close" data-close>×</button><span class="eyebrow">Rejoignez
+                AtlasLoop</span>
+            <h2>Créer un compte</h2>
+            <p>Choisissez votre type de compte.</p>
+            <form id="registerForm"><label>Je suis...<select name="role">
+                        <option>Une entreprise qui expédie</option>
+                        <option>Un transporteur</option>
+                    </select></label><label>Nom / entreprise<input name="name" required
+                        placeholder="Nom ou société"></label><label>E-mail<input name="email" type="email" required
+                        placeholder="vous@entreprise.ma"></label><label>Mot de passe<input name="password"
+                        type="password" required minlength="6" placeholder="6 caractères minimum"></label><button
+                    class="btn primary full" type="submit">Créer mon compte</button>
+                <p class="form-msg" id="registerMsg"></p>
+            </form>
+        </div>
+    </div>
+    <div class="backdrop hidden" id="track">
+        <div class="modal narrow"><button class="close" data-close>×</button><span class="eyebrow">Suivi
+                d'expédition</span>
+            <h2>Démonstration du suivi</h2>
+            <p>Les étapes visibles dans une version connectée :</p>
+            <div class="demo">
+                <p>✓ Demande créée</p>
+                <p>✓ Transporteur confirmé</p>
+                <p>🚚 En cours de transport</p>
+                <p>◷ Livraison prévue</p>
+            </div>
+            <p class="form-msg">Données fictives de démonstration.</p>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
