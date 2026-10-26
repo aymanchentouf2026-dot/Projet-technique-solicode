@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#ffffff;
+}
+.header__container{
+    width: 70%;
+    max-width: 1500px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liste__links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.logo{
+    padding-left: 20px;
+}
+.nav__link{
+    color: #646464;
+    font-size: 14px;
+    line-height: 110px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav__link:hover{
+    color: #222222;
+}
+header{
+    height: 350px;
+    background-color: #edf2f8;
+}
+.hero{ 
+    height: calc(100% - 80px);
+    max-width: 1500px;
+    max-height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+.title__hero{
+    color: #323131;
+    font-size: 80px;
+    font-family: 'Playfair Display' ;
+    font-weight: 700 ;
+    line-height: 1.33;
+
+}
+.linke__span ,.Tourist__Booking{
+    text-decoration: none;   
+    padding: 0 20px; 
+    font-weight: bold;
+}
+.linke__span{
+    color: #323131;
+}
+.linke__span:hover{
+    color: #0049ff;
+}
+.Tourist__Booking{
+    color: #0049ff;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+
+.Project1__Details{
+    background-color: #eeeded;
+    border-radius: 5px;
+    padding: 35px 35px 40px;
+    line-height: 2.3;
+    width: 25%;
+    height: fit-content;
+    font-weight: 100;
+    font-size: 20px ;
+}
+.span__project{
+    font-weight: bold;
+    color: #393939;
+}
+.continer__app{
+    width: 90%; 
+    margin: 0 auto;
+    max-width: 1500px;
+    max-height: 800px;
+    padding-bottom: 250px;
+}
+.Project{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.app__img{
+    width: 65%;
+}
+.h__project{
+    color: #393939;
+}
+.sidebar-info{
+    width: 25%;
+    height: 350px;
+    background-image: linear-gradient(rgba(0, 76, 255, 0.75),rgba(0, 76, 255, 0.75)) , url(sidebar-info-banner.jpg) ;
+    background-position: 0px 0px, 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    padding: 60px 35px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+
+}
+.hmed{
+    width: 65%;
+}
+.Project2__Details{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.p__hmed{
+    line-height: 2;
+    color: #585858;
+    font-size: 16px;
+    padding-top: 20px;
+}
+.buton{
+    padding: 15px 45px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.UI-UX_Design{
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    font-family: 'Playfair Display';
+    margin-bottom: 25px;
+}
+.phone{
+    font-family: 'Playfair Display' ;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+.carte__Related__Portfolio{
+    width: 95%;
+    display: flex;
+    gap: 20px;
+}
+.h__Related__Portfolio{
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 60px;
+    color: #000;
+}
+.carte__1 , .carte__2{
+    width: 35%;
+    height: 400px;
+    margin-top: 30px;
+    box-shadow: 5px 8px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+.continer__Related__Portfolio{
+    width: 95%;
+    max-width: 1500px;
+    height: 100vh;
+    max-height: 800px;
+    margin: 0 auto;
+}
+.span__carte{
+    font-size: 16px;
+    color: #0049ff;
+    margin-left: 15px;
+}
+.portfolio-thumbnail-1{
+    border-radius: 20px;
+    width: 90%;
+    margin: 15px auto;
+}
+.h__carte{
+    color: #000;
+    font-size: 24px;
+    margin-left: 15px;
+}
+.h__carte:hover{
+    color: #0049ff;
+}
+.carte__1:hover{
+    transform:translateY(3px);
+}
+.carte__2:hover{
+    transform:translateY(3px);
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+footer{
+    background-color: #edf2f8;
+    height: 450px;
+    max-height: 600px;
+}
+.continer__footer{
+    width: 95%;
+    max-width: 1500px;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+}
+.h__footer{
+    font-size: 30px;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+}
+.p__footer{
+    padding-top: 25px;
+    line-height: 1.8;
+}
+.bara{
+    width: 1px;
+    height: 247px;
+    border-left: solid #dbddde ;
+}
+
